@@ -48,7 +48,6 @@ function movement(IdRef) {
 
 
 $(window).on("mousemove", function(event){
-<<<<<<< HEAD
     $("#net").offset({top: event.pageY, left: event.pageX});
 });
 
@@ -83,10 +82,9 @@ $("#apple2").on("click", function(){
 $("#apple3").on("click", function(){
     $("#apple3").animate({top: basketY, left: basketX})
 })
-=======
-    $("#net").offset({top: event.pageY, left: event.pageX},);
+    
+$("#net").offset({top: event.pageY, left: event.pageX},);
     $("#butterfly").css("z-index", "4");
-});
 
 $("#moon").hide();
 
@@ -121,6 +119,3 @@ $("#wateringcan").on("click", function () {
         $(this).attr("src", attributeContent);
     }
 });
-
-
->>>>>>> 45f9b727d916b96a96bfb32008d48c01d00b313d
