@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //MAKE THE MAGIC HAPPEN
 
 var yVar = $("#basket").offset().top();
@@ -22,3 +23,6 @@ $(document).ready(function(){
 $(".apple").click(function(){
     $(this).animate({top: yVar, left: xVar});
 })
+=======
+//MAKE THE MAGIC HAPPEN
+>>>>>>> 762a7ad3dd2830cdb42993f7e2d19ece3125339b
