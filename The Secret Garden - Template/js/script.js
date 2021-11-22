@@ -51,18 +51,53 @@ function movement(IdRef) {
 }
 
 $(window).on("mousemove", function(event){
-    $("#net").offset({top: event.pageY, left: event.pageX},);
+    $("#net").offset({top: event.pageY, left: event.pageX});
     $("#butterfly").css("z-index", "4");
 
     if($("#net").offset().top == $("#buttonId").offset().top){
         $("#net").fadeOut();
     }
 
+    $("#net").css("z-index", "5");
 
 });
 
 
 $("#moon").hide();
+function appleRandomX(){
+    var appleX = Math.floor(Math.random()*372) + 718;
+    return appleX;
+}
+
+function appleRandomY(){
+    var appleY = Math.floor(Math.random()*172) + 178;
+    return appleY;
+}
+
+$(document).ready(function(){
+    $("#apple1").offset({top: appleRandomY(), left: appleRandomX()})
+    $("#apple2").offset({top: appleRandomY(), left: appleRandomX()})
+    $("#apple3").offset({top: appleRandomY(), left: appleRandomX()})
+})
+
+var basketY = $(".basket").offset().top - 30;
+var basketX = $(".basket").offset().left + 20;
+
+$("#apple1").on("click", function(){
+    $("#apple1").animate({top: basketY, left: basketX})
+})
+
+$("#apple2").on("click", function(){
+    $("#apple2").animate({top: basketY, left: basketX})
+})
+
+$("#apple3").on("click", function(){
+    $("#apple3").animate({top: basketY, left: basketX})
+})
+    
+
+
+ $("#moon").hide();
 
 var windowHeightSunMoon = ($(window).height())/64;
 var windowWidhtSunMoon = ($(window).width())/2 -100;
@@ -76,9 +111,6 @@ $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
         $("#tree").css("z-index", "3");
         $("#sun").animate({top: 150, left: windowWidhtSunMoonEnd }, 10000, "linear");
 } );
-
-
-
 
 
 $("#wateringcan").on("click", function () {
