@@ -4,6 +4,7 @@ var butterflyX;
 var butterflyY;
 var windowWidth = $(window).width() - $("#butterfly").width();
 var windowHeight= $(window).height()- $("#butterfly").height();
+var windowHeight = $(window).height()- $("#butterfly").height();
 var randomX;
 var randomY;
 
@@ -27,6 +28,17 @@ $("#butterfly").on("mouseenter",function(){
     $("#butterfly").animate({top: butterflyY, left: butterflyX}, "slow", "linear");
 
 });
+
+
+$("#butterfly").on("mouseleave",function(){
+
+    randomXY();
+    $("#butterfly").animate({top: butterflyY, left: butterflyX}, "slow", "linear");
+    $("#butterfly").stop();
+    setTimeout(movement(this),6000);
+});
+
+
 
 
 function movement(IdRef) {
@@ -58,6 +70,9 @@ $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
 } );
 
 
+
+    $("#net").offset({top: event.pageY, left: event.pageX});
+});
 
 
 $("#wateringcan").on("click", function () {
