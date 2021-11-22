@@ -5,7 +5,7 @@
 var butterflyX;
 var butterflyY;
 var windowWidth = $(window).width() - $("#butterfly").width();
-var windowHeight= $(window).height()- $("#butterfly").height();
+var windowHeight = $(window).height()- $("#butterfly").height();
 var randomX;
 var randomY;
 
@@ -23,11 +23,15 @@ function randomXY(){
 
 $("#butterfly").animate( "slow", "linear", function() {movement(this)});
 
-$("#butterfly").on("mouseenter",function(){
+$("#butterfly").on("mouseleave",function(){
+
     randomXY();
     $("#butterfly").animate({top: butterflyY, left: butterflyX}, "slow", "linear");
-
+    $("#butterfly").stop();
+    setTimeout(movement(this),6000);
 });
+
+
 
 
 function movement(IdRef) {
