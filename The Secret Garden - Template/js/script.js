@@ -1,3 +1,5 @@
+
+
 //MAKE THE MAGIC HAPPEN
 
 var butterflyX;
@@ -37,4 +39,3 @@ function movement(IdRef) {
 $(window).on("mousemove", function(event){
     $("#net").offset({top: event.pageY, left: event.pageX});
 });
-
