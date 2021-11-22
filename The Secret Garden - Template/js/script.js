@@ -145,7 +145,7 @@ function sunAndMoon() {
 $("#wateringcan").on("click", function () {
     var attributeContent = $("#wateringcan").attr("src");
     if (attributeContent === "images/wateringcan.png") {
-        attributeContent = "images/wateringcantilted2.png";
+        attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
     }
     else {
@@ -163,7 +163,7 @@ function watering() {
             left: $("#wateringcan").offset().left + 5
         })
         var attributeContent = $("#wateringcan").attr("src");
-        if (attributeContent === "images/wateringcantilted2.png") {
+        if (attributeContent === "images/wateringcantilted.png") {
             var droptop = $(window).height() - $(".waterdrop").height();
             $(".waterdrop").animate({ top: droptop }, 2000, "linear", watering());
         }
