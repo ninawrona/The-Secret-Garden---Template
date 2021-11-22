@@ -64,6 +64,14 @@ $("#showButton").on("mouseenter", function () {
     $("#net").fadeIn();
 })
 
+/* Add a button to make the net sparkle
+Gif made through https://www.glitterphoto.net/
+Christian Foyer */
+var netStatus = "boring";
+$("#chargeButton").on("mouseenter", function () {
+    $("#net").attr("src", "images/charged_net.gif");
+})
+
 // Randomly place the apples in the crown of the tree
 function appleRandomX() {
     var appleX = Math.floor(Math.random() * 372) + 718;
