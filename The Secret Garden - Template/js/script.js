@@ -68,8 +68,8 @@ $(document).ready(function(){
     $("#apple3").offset({top: appleRandomY(), left: appleRandomX()})
 })
 
-var basketY = $(".basket").offset().top;
-var basketX = $(".basket").offset().left;
+var basketY = $(".basket").offset().top - 30;
+var basketX = $(".basket").offset().left + 20;
 
 $("#apple1").on("click", function(){
     $("#apple1").animate({top: basketY, left: basketX})
@@ -102,9 +102,6 @@ $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
 
 
 } );
-
-
-
 
 
 $("#wateringcan").on("click", function () {
