@@ -148,8 +148,35 @@ function sunAndMoon() {
         });
 }
 
+
+
 // Makes the watering can tilt and drop water
 // Note: Net must be hidden
+
+
+var dropStartPosition = $(window).height();
+
+
+$(".waterdrop").hide();
+
+
+    $("#wateringcan").on("click", function () {
+        var attributeContent = $("#wateringcan").attr("src");
+        if (attributeContent === "images/wateringcan.png") {
+            attributeContent = "images/wateringcantilted.png";
+            $(this).attr("src", attributeContent);
+            
+        
+        }
+        else {
+            attributeContent = "images/wateringcan.png";
+            $(this).attr("src", attributeContent);
+        }
+    })
+
+
+
+/*
 $("#wateringcan").on("click", function () {
     var attributeContent = $("#wateringcan").attr("src");
     if (attributeContent === "images/wateringcan.png") {
@@ -177,3 +204,12 @@ function watering() {
         }
     })
 }
+
+
+
+ function pouringwater() {
+                $(".waterdrop").show();
+                $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
+                
+                $(".waterdrop").animate({ top: dropStartPosition }, 2000, "linear", tiltCan());
+*/
