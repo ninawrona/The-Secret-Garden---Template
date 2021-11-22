@@ -103,8 +103,6 @@ $("#apple3").on("click", function(){
 var windowHeightSunMoon = ($(window).height())/64;
 var windowWidhtSunMoon = ($(window).width())/2 -100;
 var windowWidhtSunMoonEnd = ($(window).width());
-<<<<<<< Updated upstream
-=======
 var PositionBaseY = $("#sun").offset().top-100;
 var PositionBaseX = $("#sun").offset().left;
 
@@ -144,7 +142,6 @@ function sunAndMoon()
             });
         });
 }
->>>>>>> Stashed changes
 
 
 
