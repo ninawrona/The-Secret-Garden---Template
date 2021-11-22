@@ -49,6 +49,9 @@ function movement(IdRef) {
 
 $(window).on("mousemove", function(event){
     $("#net").offset({top: event.pageY, left: event.pageX});
+    $("#butterfly").css("z-index", "4");
+    $("#net").css("z-index", "5");
+
 });
 
 
@@ -68,8 +71,8 @@ $(document).ready(function(){
     $("#apple3").offset({top: appleRandomY(), left: appleRandomX()})
 })
 
-var basketY = $(".basket").offset().top;
-var basketX = $(".basket").offset().left;
+var basketY = $(".basket").offset().top - 30;
+var basketX = $(".basket").offset().left + 20;
 
 $("#apple1").on("click", function(){
     $("#apple1").animate({top: basketY, left: basketX})
@@ -83,10 +86,9 @@ $("#apple3").on("click", function(){
     $("#apple3").animate({top: basketY, left: basketX})
 })
     
-$("#net").offset({top: event.pageY, left: event.pageX},);
-    $("#butterfly").css("z-index", "4");
 
-$("#moon").hide();
+
+ $("#moon").hide();
 
 var windowHeightSunMoon = ($(window).height())/64;
 var windowWidhtSunMoon = ($(window).width())/2 -100;
@@ -102,9 +104,6 @@ $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
 
 
 } );
-
-
-
 
 
 $("#wateringcan").on("click", function () {
