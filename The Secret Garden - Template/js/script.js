@@ -51,11 +51,17 @@ function movement(IdRef) {
 }
 
 $(window).on("mousemove", function(event){
+    var mouseY = event.pageY;
     $("#net").offset({top: event.pageY, left: event.pageX});
     $("#butterfly").css("z-index", "4");
 
-    if($("#net").offset().top == $("#buttonId").offset().top){
+    if($("#net").offset().top <= $("#buttonId").offset().top  + 15){
         $("#net").fadeOut();
+    }
+
+    if((mouseY > $("#buttonId").offset().top  + 15)){
+        $("#net").fadeIn();
+
     }
 
     $("#net").css("z-index", "5");
@@ -128,6 +134,6 @@ $("#wateringcan").on("click", function () {
 
 
 $("#buttonId").on("click",function(){
-$("body").css("background-color", randomColor());
-$("#net").fadeIn();
+    $("body").css("background-color", randomColor());
+    $("#net").fadeIn();
 });
