@@ -71,8 +71,6 @@ $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
 
 
 
-    $("#net").offset({top: event.pageY, left: event.pageX});
-});
 
 
 $("#wateringcan").on("click", function () {
