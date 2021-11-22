@@ -49,6 +49,9 @@ function movement(IdRef) {
 
 $(window).on("mousemove", function(event){
     $("#net").offset({top: event.pageY, left: event.pageX});
+    $("#butterfly").css("z-index", "4");
+    $("#net").css("z-index", "5");
+
 });
 
 
@@ -83,10 +86,9 @@ $("#apple3").on("click", function(){
     $("#apple3").animate({top: basketY, left: basketX})
 })
     
-$("#net").offset({top: event.pageY, left: event.pageX},);
-    $("#butterfly").css("z-index", "4");
 
-$("#moon").hide();
+
+ $("#moon").hide();
 
 var windowHeightSunMoon = ($(window).height())/64;
 var windowWidhtSunMoon = ($(window).width())/2 -100;
