@@ -154,62 +154,31 @@ function sunAndMoon() {
 // Note: Net must be hidden
 
 
-var dropStartPosition = $(window).height();
+var droptop = $(window).height() - $(".waterdrop").height();
 
 
 $(".waterdrop").hide();
 
 
-    $("#wateringcan").on("click", function () {
-        var attributeContent = $("#wateringcan").attr("src");
-        if (attributeContent === "images/wateringcan.png") {
-            attributeContent = "images/wateringcantilted.png";
-            $(this).attr("src", attributeContent);
-            
-        
-        }
-        else {
-            attributeContent = "images/wateringcan.png";
-            $(this).attr("src", attributeContent);
-        }
-    })
-
-
-
-/*
 $("#wateringcan").on("click", function () {
     var attributeContent = $("#wateringcan").attr("src");
     if (attributeContent === "images/wateringcan.png") {
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
+        $(".waterdrop").show();
+        $(".waterdrop").offset({
+            top: $("#wateringcan").offset().top + 20,
+            left: $("#wateringcan").offset().left + 5
+        })
+
+        $(".waterdrop").animate({ top: droptop }, 2000, "linear", function () {
+            $(".waterdrop").animate({ top: droptop }, 2000, "linear")
+        });
+
+
     }
     else {
         attributeContent = "images/wateringcan.png";
         $(this).attr("src", attributeContent);
     }
 });
-
-watering();
-
-function watering() {
-    $("#wateringcan").on("click", function () {
-        $(".waterdrop").offset({
-            top: $("#wateringcan").offset().top + 20,
-            left: $("#wateringcan").offset().left + 5
-        })
-        var attributeContent = $("#wateringcan").attr("src");
-        if (attributeContent === "images/wateringcantilted.png") {
-            var droptop = $(window).height() - $(".waterdrop").height();
-            $(".waterdrop").animate({ top: droptop }, 2000, "linear", watering());
-        }
-    })
-}
-
-
-
- function pouringwater() {
-                $(".waterdrop").show();
-                $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
-                
-                $(".waterdrop").animate({ top: dropStartPosition }, 2000, "linear", tiltCan());
-*/
