@@ -6,6 +6,8 @@ $("#wateringcan").on("click", function () {
     if (attributeContent === "images/wateringcan.png") {
         attributeContent = "images/wateringcantilted2.png";
         $(this).attr("src", attributeContent);
+
+
     }
     else {
         attributeContent = "images/wateringcan.png";
@@ -14,3 +16,23 @@ $("#wateringcan").on("click", function () {
 });
 
 
+
+watering();
+
+function watering() {
+    $("#wateringcan").on("click", function () {
+        $(".waterdrop").offset({
+            top: $("#wateringcan").offset().top + 20,
+            left: $("#wateringcan").offset().left + 5
+
+        })
+
+        var attributeContent = $("#wateringcan").attr("src");
+        if (attributeContent === "images/wateringcantilted2.png") {
+            var droptop = $(window).height() - $(".waterdrop").height();
+            
+            $(".waterdrop").animate({ top: droptop }, 2000, "linear", watering());
+        }
+
+    })
+}
