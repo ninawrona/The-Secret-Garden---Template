@@ -11,8 +11,12 @@ var randomY;
 var xCoord;
 var yCoord;
 
+var colors = ["blue", "red", "yellow", "green"];
 
-
+function randomColor(){
+    var number = Math.floor(Math.random()*4);
+    return colors[number];
+}
 
 function randomXY(){
  butterflyX = Math.floor(Math.random()*windowWidth);
@@ -46,11 +50,17 @@ function movement(IdRef) {
     $(IdRef).animate({top: butterflyY}).delay(2000).animate({left: butterflyX}, "slow", "linear", function(){movement(IdRef);});;
 }
 
-
 $(window).on("mousemove", function(event){
     $("#net").offset({top: event.pageY, left: event.pageX},);
     $("#butterfly").css("z-index", "4");
+
+    if($("#net").offset().top == $("#buttonId").offset().top){
+        $("#net").fadeOut();
+    }
+
+
 });
+
 
 $("#moon").hide();
 
@@ -65,8 +75,6 @@ $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
         $("#sun").css("z-index", "2");
         $("#tree").css("z-index", "3");
         $("#sun").animate({top: 150, left: windowWidhtSunMoonEnd }, 10000, "linear");
-
-
 } );
 
 
@@ -87,3 +95,7 @@ $("#wateringcan").on("click", function () {
 });
 
 
+$("#buttonId").on("click",function(){
+$("body").css("background-color", randomColor());
+$("#net").fadeIn();
+});
