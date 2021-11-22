@@ -7,6 +7,8 @@ var windowHeight= $(window).height()- $("#butterfly").height();
 var randomX;
 var randomY;
 
+var xCoord;
+var yCoord;
 
 
 
@@ -17,26 +19,22 @@ function randomXY(){
 
 
 
-$("#butterfly").animate( "slow", function() {squareMovement(this)});
+$("#butterfly").animate( "slow", "linear", function() {movement(this)});
 
 $("#butterfly").on("mouseenter",function(){
     randomXY();
-    $("#butterfly").animate({top: butterflyY, left: butterflyX}, "slow");
-    $("#butterfly").stop();
-
+    $("#butterfly").animate({top: butterflyY, left: butterflyX}, "slow", "linear");
 
 });
 
 
-function squareMovement(IdRef) {
+function movement(IdRef) {
     randomXY();
-    $(IdRef).animate({top: butterflyY}).delay(2000).animate({left: butterflyX}, "slow", function(){squareMovement(IdRef);});
+    $(IdRef).animate({top: butterflyY}).delay(2000).animate({left: butterflyX}, "slow", "linear", function(){movement(IdRef);});;
 }
 
 
-$(window).on("mouseenter", function(event){
-    var xCoord = event.pageX;
-    var yCoord = event.pageY;
-
-    $("#net").offset({top: yCoord, left: xCoord});
+$(window).on("mousemove", function(event){
+    $("#net").offset({top: event.pageY, left: event.pageX});
 });
+
