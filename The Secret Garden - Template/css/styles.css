@@ -51,6 +51,20 @@ body {
 
 }
 
+#sun
+{
+    margin-top: 10%;
+    padding-right: 100%;
+    position: absolute;
+}
+
+#moon
+{
+    margin-top: 10%;
+    padding-right: 100%;
+    position: absolute;
+}
+
 
 body {
     margin: 0px;
