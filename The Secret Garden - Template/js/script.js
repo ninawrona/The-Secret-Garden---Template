@@ -51,17 +51,11 @@ function movement(IdRef) {
 }
 
 $(window).on("mousemove", function(event){
-    var mouseY = event.pageY;
     $("#net").offset({top: event.pageY, left: event.pageX});
     $("#butterfly").css("z-index", "4");
 
-    if($("#net").offset().top <= $("#buttonId").offset().top  + 15){
+    if($("#net").offset().top == $("#buttonId").offset().top){
         $("#net").fadeOut();
-    }
-
-    if((mouseY > $("#buttonId").offset().top  + 15)){
-        $("#net").fadeIn();
-
     }
 
     $("#net").css("z-index", "5");
@@ -103,50 +97,11 @@ $("#apple3").on("click", function(){
     
 
 
- 
+ $("#moon").hide();
 
 var windowHeightSunMoon = ($(window).height())/64;
 var windowWidhtSunMoon = ($(window).width())/2 -100;
 var windowWidhtSunMoonEnd = ($(window).width());
-var PositionBaseY = $("#sun").offset().top;
-var PositionBaseX = $("#sun").offset().left;
-
-$("#moon").hide();
-$("body").css("background-color", "rgb(197, 195, 219)")
-sunAndMoon();
-
-
-function sunAndMoon()
-{
-
-    $("#sun").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
-        function(){
-            $("#sun").css("z-index", "2");
-            $("#tree").css("z-index", "3");
-            $("#sun").animate({top: 150, left: windowWidhtSunMoonEnd }, 10000, "linear", 
-            function()
-            {
-                    $("#sun").hide();
-                    $("body").css("background-color", "rgb(15, 10, 64)")
-                    $("#moon").fadeIn();
-                    $("#moon").animate({top: -150, left: windowWidhtSunMoon},10000,"linear",
-                    function()
-                    {
-                        $("#moon").css("z-index", "2");
-                        $("#moon").animate({top: 150, left: windowWidhtSunMoonEnd }, 10000, "linear",
-                        function()
-                        {
-                            $("#moon").hide();
-                            $("#moon").animate({top: PositionBaseY, left: PositionBaseX});
-                            $("#sun").animate({top: PositionBaseY, left: PositionBaseX});
-                            $("#sun").fadeIn();
-                            $("body").css("background-color", "rgb(197, 195, 219)");
-                            sunAndMoon();
-                        });    
-                    });
-            });
-        });
-}
 
 
 
@@ -174,7 +129,6 @@ $("#wateringcan").on("click", function () {
 });
 
 
-<<<<<<< HEAD
 
 watering();
 
@@ -195,9 +149,7 @@ function watering() {
 
     })
 }
-=======
 $("#buttonId").on("click",function(){
-    $("body").css("background-color", randomColor());
-    $("#net").fadeIn();
+$("body").css("background-color", randomColor());
+$("#net").fadeIn();
 });
->>>>>>> 30d9980e7ef0e744eb453637a80f2165ad91cacf
