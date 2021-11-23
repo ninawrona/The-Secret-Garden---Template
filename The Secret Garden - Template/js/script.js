@@ -11,6 +11,21 @@ var randomY;
 var xCoord;
 var yCoord;
 
+// call a sun/moon function
+var windowHeightSunMoon = ($(window).height()) / 64;
+var windowWidhtSunMoon = ($(window).width()) / 2 - 100;
+var windowWidhtSunMoonEnd = ($(window).width());
+
+sunAndMoon();
+
+/*
+$("*").click(function(event){
+
+    $("#xcoordId").text(event.pageX);
+    $("#ycoordId").text(event.pageY);
+});
+*/
+
 /* Adds a button to the top left to change the background to a random pick of 4 colors below
 Martin Rosendahl */
 var colors = ["lightSeaGreen", "peachPuff", "plum", "paleVioletRed"];
@@ -123,8 +138,8 @@ $(document).ready(function () {
 $(".apple").css("z-index", "4");
 $("#basketfront").css("z-index", "5");
 
-var basketY = $("#basketfront").offset().top;
-var basketX = $("#basketfront").offset().left;
+var basketY = $("#basketfront").offset().top - 30;
+var basketX = $("#basketfront").offset().left + 15;
 
 $("#apple1").on("click", function () {
     $("#apple1").animate({ top: basketY, left: basketX }, 2000, 'linear')
@@ -143,15 +158,22 @@ Kamil Fischbach */
 var windowHeightSunMoon = ($(window).height()) / 64;
 var windowWidhtSunMoon = ($(window).width()) / 2 - 100;
 var windowWidhtSunMoonEnd = ($(window).width());
-var PositionBaseY = $("#sun").offset().top - 100;
-var PositionBaseX = $("#sun").offset().left;
+var PositionBaseY = 0.2*$(window).height;
+var PositionBaseX = 0.1*$(window).height;
 
-$("#moon").hide();
-$("body").css("background-color", "rgb(197, 195, 219)")
-sunAndMoon();
+
+
+
 
 
 function sunAndMoon() {
+    $("#sun").hide();
+    $("#moon").hide();
+    $("body").css("background-color", "rgb(197, 195, 219)");
+    $("#sun").animate({top: 50, left: 10},1);
+    $("#moon").animate({top: 50, left: 10},1);
+    $("#sun").fadeIn();
+
     $("#sun").animate({ top: -150, left: windowWidhtSunMoon }, 10000, "linear",
         function () {
             $("#sun").css("z-index", "2");
