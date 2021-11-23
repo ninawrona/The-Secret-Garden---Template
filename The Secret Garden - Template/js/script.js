@@ -225,51 +225,79 @@ function sunAndMoon() {
 // Makes the watering can tilt and drop water
 // Note: Net must be hidden
 
+// The dripping water forms a swamp over time.
+// Robert Barta
 
+
+
+
+$(".waterdrop").hide(); $("#swamp1").hide(); $("#swamp21").hide(); $("#swamp22").hide(); $("#swamp31").hide(); $("#swamp32").hide(); $("#swamp33").hide(); $("#shrek").hide();
+
+var dropCount = 0;
 var droptop = $(window).height() - $(".waterdrop").height();
 
-
-$(".waterdrop").hide();
-
-
+$("#wateringcan").css("z-index", "6");
+$(".waterdrop").css("z-index", "7");
 
 $("#wateringcan").on("click", function () {
     var attributeContent = $("#wateringcan").attr("src");
     if (attributeContent === "images/wateringcan.png") {
-        
+
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
-        
-            $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
-            drip();
-            function drip() {
-                $(".waterdrop").fadeIn();
-                $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
-                    drip()
-                
-                })
 
+        $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
+        drip();
 
-                $(".waterdrop").offset({
-                    top: $("#wateringcan").offset().top + 20,
-                    left: $("#wateringcan").offset().left + 5
-                })
+        function drip() {
+            $(".waterdrop").fadeIn();
+            $(".waterdrop").animate({ top: droptop }, 100, "linear", function () {
+                dropCount++;
+                drip();
 
-            }
+                if (dropCount > 10) {
+                    $("#swamp31").fadeIn().css("z-index", "4");
+                }
+                if (dropCount > 30) {
+                    $("#swamp31").css("height", "30%", "left", "40%");
+                    $("#swamp32").fadeIn().css("left", "60%").css("z-index", "4");
+                }
+                if (dropCount > 50) {
+                    $("#swamp31").css("height", "50%");
+                    $("#swamp32").css("height", "35%")
+                    $("#swamp33").fadeIn().css("left", "30%");
+                }
+                if (dropCount > 70) {
+                    $("#swamp1").fadeIn().css("z-index", "4");
+                }
+                if (dropCount > 90) {
+                    $("#swamp21").fadeIn().css("z-index", "5");;
+                }
+                if (dropCount > 110) {
+                    $("#swamp22").fadeIn().css("z-index", "5");;
+                }
+                if (dropCount > 130) {
+                    $("#shrek").fadeIn().css("z-index", "3");
+                }
+            })
+            $(".waterdrop").offset({
+                top: $("#wateringcan").offset().top + 20,
+                left: $("#wateringcan").offset().left + 5
+            })
         }
-       
-    
-
-
+    }
     else {
         attributeContent = "images/wateringcan.png";
         $(this).attr("src", attributeContent);
         stopdrip();
-        function stopdrip(){
+        function stopdrip() {
             $(".waterdrop").stop(true);
             $(".waterdrop").hide();
         }
-
-
     }
 });
+
+
+
+
+
