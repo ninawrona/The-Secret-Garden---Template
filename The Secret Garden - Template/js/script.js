@@ -11,6 +11,21 @@ var randomY;
 var xCoord;
 var yCoord;
 
+// call a sun/moon function
+var windowHeightSunMoon = ($(window).height()) / 64;
+var windowWidhtSunMoon = ($(window).width()) / 2 - 100;
+var windowWidhtSunMoonEnd = ($(window).width());
+
+sunAndMoon();
+
+/*
+$("*").click(function(event){
+
+    $("#xcoordId").text(event.pageX);
+    $("#ycoordId").text(event.pageY);
+});
+*/
+
 /* Adds a button to the top left to change the background to a random pick of 4 colors below
 Martin Rosendahl */
 var colors = ["lightSeaGreen", "peachPuff", "plum", "paleVioletRed"];
@@ -67,10 +82,38 @@ $("#showButton").on("mouseenter", function () {
 /* Add a button to make the net sparkle
 Gif made through https://www.glitterphoto.net/
 Christian Foyer */
-var netStatus = "boring";
-$("#chargeButton").on("mouseenter", function () {
-    $("#net").attr("src", "images/charged_net.gif");
+$("#chargeButton").on("mouseenter", function (){
+    $("#net").fadeOut();
 })
+
+$("#chargeButton").on("click", function () {
+    var src = $("#net").attr("src");
+    if (src === "images/net.png") {
+        src = "images/charged_net.gif";
+        $("#net").attr("src", src);
+        $("#net").fadeIn();
+    }
+    else {
+        src = "images/net.png";
+        $("#net").attr("src", src);
+        $("#net").fadeIn();
+    }
+})
+/* Reference
+$("#imageId").on("click", function() {
+    var attributeContent = $("#imageId").attr("src");
+    if (attributeContent === "images/glad.jpg")
+    {
+        attributeContent = "images/sad.jpg";
+        $(this).attr("src", attributeContent);
+    }
+    else
+    {
+        attributeContent = "images/glad.jpg";
+        $(this).attr("src", attributeContent);
+    }
+})
+*/
 
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
 // multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
@@ -118,15 +161,22 @@ Kamil Fischbach */
 var windowHeightSunMoon = ($(window).height()) / 64;
 var windowWidhtSunMoon = ($(window).width()) / 2 - 100;
 var windowWidhtSunMoonEnd = ($(window).width());
-var PositionBaseY = $("#sun").offset().top - 100;
-var PositionBaseX = $("#sun").offset().left;
+var PositionBaseY = 0.2*$(window).height;
+var PositionBaseX = 0.1*$(window).height;
 
-$("#moon").hide();
-$("body").css("background-color", "rgb(197, 195, 219)")
-sunAndMoon();
+
+
+
 
 
 function sunAndMoon() {
+    $("#sun").hide();
+    $("#moon").hide();
+    $("body").css("background-color", "rgb(197, 195, 219)");
+    $("#sun").animate({top: 50, left: 10},1);
+    $("#moon").animate({top: 50, left: 10},1);
+    $("#sun").fadeIn();
+
     $("#sun").animate({ top: -150, left: windowWidhtSunMoon }, 10000, "linear",
         function () {
             $("#sun").css("z-index", "2");
