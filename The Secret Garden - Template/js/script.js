@@ -72,14 +72,15 @@ $("#chargeButton").on("mouseenter", function () {
     $("#net").attr("src", "images/charged_net.gif");
 })
 
-// Randomly place the apples in the crown of the tree
+// Randomly place the apples in the crown of the tree by taking random number that is created by 
+// multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
 function appleRandomX() {
-    var appleX = Math.floor(Math.random() * 372) + 718;
+    var appleX = Math.floor(Math.random() * 370) + $("#tree").offset().left;
     return appleX;
 }
 
 function appleRandomY() {
-    var appleY = Math.floor(Math.random() * 172) + 178;
+    var appleY = Math.floor(Math.random() * 170) + $("#tree").offset().top;
     return appleY;
 }
 
@@ -91,21 +92,22 @@ $(document).ready(function () {
 
 // Place the apples in the basket when clicked
 // Note: Net must be hidden
-var basketY = $(".basket").offset().top - 30;
-var basketX = $(".basket").offset().left + 20;
-
 $(".apple").css("z-index", "4");
 $("#basketfront").css("z-index", "5");
+
+var basketY = $("#basketfront").offset().top;
+var basketX = $("#basketfront").offset().left;
+
 $("#apple1").on("click", function () {
-    $("#apple1").animate({ top: basketY, left: basketX })
+    $("#apple1").animate({ top: basketY, left: basketX }, 2000, 'linear')
 })
 
 $("#apple2").on("click", function () {
-    $("#apple2").animate({ top: basketY, left: basketX })
+    $("#apple2").animate({ top: basketY, left: basketX }, 2000, 'linear')
 })
 
 $("#apple3").on("click", function () {
-    $("#apple3").animate({ top: basketY, left: basketX })
+    $("#apple3").animate({ top: basketY, left: basketX }, 2000, 'linear')
 })
 
 /* Adds a sun and moon that traverse the sky and change the background
