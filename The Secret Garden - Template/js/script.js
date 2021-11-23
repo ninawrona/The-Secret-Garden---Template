@@ -232,38 +232,44 @@ var droptop = $(window).height() - $(".waterdrop").height();
 $(".waterdrop").hide();
 
 
+
 $("#wateringcan").on("click", function () {
     var attributeContent = $("#wateringcan").attr("src");
     if (attributeContent === "images/wateringcan.png") {
+        
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
-        if(attributeContent==="images/wateringcantilted.png"){
-            $(".waterdrop").offset({top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5})
-        drip();
-        function drip() {
-            $(".waterdrop").fadeIn();
-            $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
-               drip()
-            })
-
-
-            $(".waterdrop").offset({
-                top: $("#wateringcan").offset().top + 20,
-                left: $("#wateringcan").offset().left + 5
-            })
-
-        }
-    }
-    else{
-        $(".waterdrop").stop();
-    }
-        }
         
+            $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
+            drip();
+            function drip() {
+                $(".waterdrop").fadeIn();
+                $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
+                    drip()
+                
+                })
+
+
+                $(".waterdrop").offset({
+                    top: $("#wateringcan").offset().top + 20,
+                    left: $("#wateringcan").offset().left + 5
+                })
+
+            }
+        }
+       
+    
+
 
     else {
         attributeContent = "images/wateringcan.png";
         $(this).attr("src", attributeContent);
-        
-        
+        stopdrip();
+        function stopdrip(){
+            $(".waterdrop").stop(true);
+            $(".waterdrop").hide();
+        }
+
+
     }
 });
