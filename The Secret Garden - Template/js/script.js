@@ -6,6 +6,10 @@ $("#info").css("font-family" ,"Arial, Helvetica, sans-serif");
 $("#info").css("padding-right", "10px");
 $(".buttons").css("margin-top", "10px");
 $("#buttonId").css("margin-left", "5px");
+$(".buttons").css("position", "relative");
+$(".buttons").css("z-index", "5");
+
+
 
 $(".basket").offset({left: $("#tree").offset().left+100})
 
@@ -85,6 +89,7 @@ $("#hideButton").on("mouseenter", function () {
     $("#net").fadeOut();
 })
 
+
 $("#showButton").on("mouseenter", function () {
     $("#net").fadeIn();
 })
@@ -128,12 +133,12 @@ $("#imageId").on("click", function() {
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
 // multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
 function appleRandomX() {
-    var appleX = Math.floor(Math.random() * 370) + $("#tree").offset().left + 30;
+    var appleX = Math.floor(Math.random() * 320) + $("#tree").offset().left + 30;
     return appleX;
 }
 
 function appleRandomY() {
-    var appleY = Math.floor(Math.random() * 170) + $("#tree").offset().top;
+    var appleY = Math.floor(Math.random() * 190) + $("#tree").offset().top;
     return appleY;
 }
 
@@ -180,6 +185,8 @@ var PositionBaseX = 0.1 * $(window).height;
 
 
 function sunAndMoon() {
+    //buttons need to be above the sun
+    
     $("#sun").hide();
     $("#moon").hide();
     $("body").css("background-color", "rgb(197, 195, 219)");

@@ -100,3 +100,14 @@ body {
     color: #4CAF50 ;
 }
 
+#buttonId:active
+{
+    background-color: rgb(212, 57, 57);
+    color: #4CAF50 ;
+}
+
+#chargeButton:active
+{
+    background-color: rgb(212, 57, 57);
+    color: #4CAF50 ;
+}
