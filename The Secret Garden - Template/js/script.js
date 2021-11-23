@@ -1,5 +1,12 @@
 //MAKE THE MAGIC HAPPEN
 
+$("#info").css("float" ,"right");
+$("#info").css("color" ,"red");
+$("#info").css("font-family" ,"Arial, Helvetica, sans-serif");
+$("#info").css("padding-right", "10px");
+
+
+
 var butterflyX;
 var butterflyY;
 var windowWidth = $(window).width() - $("#butterfly").width();
