@@ -7,7 +7,7 @@ $("#info").css("padding-right", "10px");
 $(".buttons").css("margin-top", "10px");
 $("#buttonId").css("margin-left", "5px");
 
-
+$(".basket").offset({left: $("#tree").offset().left+100})
 
 
 var butterflyX;
