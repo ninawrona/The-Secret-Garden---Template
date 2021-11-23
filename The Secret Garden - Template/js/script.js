@@ -133,6 +133,7 @@ $("#imageId").on("click", function() {
 
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
 // multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
+//Nina Wrona
 function appleRandomX() {
     var appleX = Math.floor(Math.random() * 320) + $("#tree").offset().left + 30;
     return appleX;
@@ -152,6 +153,7 @@ $(document).ready(function () {
 
 // Increase the size of apples for a few sec and place the apples in the basket when clicked
 // Note: Net must be hidden
+//Nina Wrona
 $(".apple").css("z-index", "8");
 $("#basketwhole").css("z-index", "7");
 $("#basketfront").css("z-index", "9");
