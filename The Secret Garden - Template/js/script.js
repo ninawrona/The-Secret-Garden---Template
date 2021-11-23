@@ -67,10 +67,38 @@ $("#showButton").on("mouseenter", function () {
 /* Add a button to make the net sparkle
 Gif made through https://www.glitterphoto.net/
 Christian Foyer */
-var netStatus = "boring";
-$("#chargeButton").on("mouseenter", function () {
-    $("#net").attr("src", "images/charged_net.gif");
+$("#chargeButton").on("mouseenter", function (){
+    $("#net").fadeOut();
 })
+
+$("#chargeButton").on("click", function () {
+    var src = $("#net").attr("src");
+    if (src === "images/net.png") {
+        src = "images/charged_net.gif";
+        $("#net").attr("src", src);
+        $("#net").fadeIn();
+    }
+    else {
+        src = "images/net.png";
+        $("#net").attr("src", src);
+        $("#net").fadeIn();
+    }
+})
+/* Reference
+$("#imageId").on("click", function() {
+    var attributeContent = $("#imageId").attr("src");
+    if (attributeContent === "images/glad.jpg")
+    {
+        attributeContent = "images/sad.jpg";
+        $(this).attr("src", attributeContent);
+    }
+    else
+    {
+        attributeContent = "images/glad.jpg";
+        $(this).attr("src", attributeContent);
+    }
+})
+*/
 
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
 // multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
