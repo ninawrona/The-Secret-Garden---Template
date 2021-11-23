@@ -7,7 +7,7 @@ $("#info").css("padding-right", "10px");
 $(".buttons").css("margin-top", "10px");
 $("#buttonId").css("margin-left", "5px");
 $(".buttons").css("position", "relative");
-$(".buttons").css("z-index", "5");
+$(".buttons").css("z-index", "10");
 
 
 
