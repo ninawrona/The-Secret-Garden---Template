@@ -4,7 +4,7 @@ $("#info").css("float", "right");
 $("#info").css("color", "rgb(212, 57, 57)");
 $("#info").css("font-family", "Arial, Helvetica, sans-serif");
 $("#info").css("padding-right", "10px");
-$("#info").css("z0index", "10");
+$("#info").css("z-index", "10");
 $(".buttons").css("margin-top", "10px");
 $("#buttonId").css("margin-left", "5px");
 $(".buttons").css("position", "relative");
