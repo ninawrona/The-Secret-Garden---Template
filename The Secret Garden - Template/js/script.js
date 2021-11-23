@@ -4,6 +4,9 @@ $("#info").css("float" ,"right");
 $("#info").css("color" ,"red");
 $("#info").css("font-family" ,"Arial, Helvetica, sans-serif");
 $("#info").css("padding-right", "10px");
+$(".buttons").css("margin-top", "10px");
+$(".buttons").css("margin-left", "5px");
+
 
 
 
