@@ -95,8 +95,8 @@ $(document).ready(function () {
 $(".apple").css("z-index", "4");
 $("#basketfront").css("z-index", "5");
 
-var basketY = $("#basketfront").offset().top;
-var basketX = $("#basketfront").offset().left;
+var basketY = $("#basketfront").offset().top - 30;
+var basketX = $("#basketfront").offset().left + 15;
 
 $("#apple1").on("click", function () {
     $("#apple1").animate({ top: basketY, left: basketX }, 2000, 'linear')
