@@ -273,12 +273,12 @@ $("#wateringcan").on("click", function () {
                     $("#swamp1").fadeIn().css("z-index", "4");
                 }
                 if (dropCount > 90) {
-                    $("#swamp21").fadeIn().css("z-index", "5");;
+                    $("#swamp21").fadeIn().css("z-index", "2");;
                 }
-                if (dropCount > 110) {
+                if (dropCount > 100) {
                     $("#swamp22").fadeIn().css("z-index", "5");;
                 }
-                if (dropCount > 130) {
+                if (dropCount > 115) {
                     $("#shrek").fadeIn().css("z-index", "3");
                 }
             })
