@@ -1,8 +1,8 @@
 //MAKE THE MAGIC HAPPEN
 
-$("#info").css("float" ,"right");
-$("#info").css("color" ,"rgb(212, 57, 57)");
-$("#info").css("font-family" ,"Arial, Helvetica, sans-serif");
+$("#info").css("float", "right");
+$("#info").css("color", "rgb(212, 57, 57)");
+$("#info").css("font-family", "Arial, Helvetica, sans-serif");
 $("#info").css("padding-right", "10px");
 $(".buttons").css("margin-top", "10px");
 $("#buttonId").css("margin-left", "5px");
@@ -11,7 +11,7 @@ $(".buttons").css("z-index", "5");
 
 
 
-$(".basket").offset({left: $("#tree").offset().left+100})
+$(".basket").offset({ left: $("#tree").offset().left + 100 })
 
 
 var butterflyX;
@@ -155,20 +155,20 @@ $(".apple").css("z-index", "4");
 $("#basketfront").css("z-index", "5");
 
 var basketY = $("#basketfront").offset().top - 30;
-var basketX = $("#basketfront").offset().left + 15;    
+var basketX = $("#basketfront").offset().left + 15;
 
 
 $("#apple1").on("click", function () {
-    $("#apple1").animate({height: 50, width:50}, 1000).animate({height: 25, width:25}, 1000).animate({ top: basketY, left: basketX}, 2000, 'linear')
+    $("#apple1").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
 })
-    
+
 
 $("#apple2").on("click", function () {
-    $("#apple2").animate({height: 50, width:50}, 1000).animate({height: 25, width:25}, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
+    $("#apple2").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
 })
 
 $("#apple3").on("click", function () {
-    $("#apple3").animate({height: 50, width:50}, 1000).animate({height: 25, width:25}, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
+    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
 })
 
 /* Adds a sun and moon that traverse the sky and change the background
@@ -186,7 +186,7 @@ var PositionBaseX = 0.1 * $(window).height;
 
 function sunAndMoon() {
     //buttons need to be above the sun
-    
+
     $("#sun").hide();
     $("#moon").hide();
     $("body").css("background-color", "rgb(197, 195, 219)");
@@ -237,28 +237,16 @@ $("#wateringcan").on("click", function () {
     if (attributeContent === "images/wateringcan.png") {
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
-        $(".waterdrop").offset({
-            top: $("#wateringcan").offset().top + 20,
-            left: $("#wateringcan").offset().left + 5
-        })
+        if(attributeContent==="images/wateringcantilted.png"){
+            $(".waterdrop").offset({top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5})
         drip();
-        function drip()
-        {   
-            $("#waterdrop1").fadeIn();
-            $("#waterdrop1").animate({ top: droptop }, 500, "linear",function()
-                {
-                    $("#waterdrop2").fadeIn();
-                    $("#waterdrop2").animate({ top: droptop }, 500, "linear", function()
-                    {
-                        $("#waterdrop3").fadeIn();
-                        $("#waterdrop3").animate({ top: droptop }, 500, "linear", function()
-                        {
-                            drip();
-                        });
-                    })
-                })
-            
-            
+        function drip() {
+            $(".waterdrop").fadeIn();
+            $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
+               drip()
+            })
+
+
             $(".waterdrop").offset({
                 top: $("#wateringcan").offset().top + 20,
                 left: $("#wateringcan").offset().left + 5
@@ -266,9 +254,16 @@ $("#wateringcan").on("click", function () {
 
         }
     }
+    else{
+        $(".waterdrop").stop();
+    }
+        }
         
+
     else {
         attributeContent = "images/wateringcan.png";
         $(this).attr("src", attributeContent);
+        
+        
     }
 });
