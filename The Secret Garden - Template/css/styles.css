@@ -13,7 +13,7 @@ body {
 #wateringcan {
     width: 100px;
     position: fixed;
-    bottom: 20%;
+    bottom: 40%;
     left: 40%;
 }
 
@@ -63,6 +63,73 @@ body {
     margin-top: 10%;
     padding-right: 100%;
     position: absolute;
+}
+
+#swamp31
+{
+    margin-top:0px;
+    position: fixed;
+    height: 25%;
+    bottom:0px;
+    right:40%;
+    position:absolute;
+}
+#swamp32
+{
+    margin-top:0px;
+    position: fixed;
+    height: 25%;
+    bottom:0px;
+    right:40%;
+    position:absolute;
+}
+#swamp33
+{
+    margin-top:0px;
+    position: fixed;
+    height: 40%;
+    bottom:0px;
+    right:40%;
+    position:absolute;
+}
+
+#swamp1
+{
+    margin-top:0px;
+    position:fixed;
+    height:90%;
+    bottom:0px;
+    right:0%;
+    position:absolute;
+}
+
+#swamp21
+{
+    
+    position:fixed;
+    height:100%;
+    bottom:0px;
+    right:50%;
+    position:absolute;
+}
+#swamp22
+{
+    
+    position:fixed;
+    height:100%;
+    bottom:0px;
+    left:50%;
+    position:absolute;
+    top:-21%;
+}
+
+#shrek
+{
+    position:fixed;
+    height:40%;
+    bottom:0px;
+    right:30%;
+    position:absolute;
 }
 
 
