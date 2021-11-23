@@ -237,18 +237,36 @@ $("#wateringcan").on("click", function () {
     if (attributeContent === "images/wateringcan.png") {
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
-        $(".waterdrop").show();
         $(".waterdrop").offset({
             top: $("#wateringcan").offset().top + 20,
             left: $("#wateringcan").offset().left + 5
         })
+        drip();
+        function drip()
+        {   
+            $("#waterdrop1").fadeIn();
+            $("#waterdrop1").animate({ top: droptop }, 500, "linear",function()
+                {
+                    $("#waterdrop2").fadeIn();
+                    $("#waterdrop2").animate({ top: droptop }, 500, "linear", function()
+                    {
+                        $("#waterdrop3").fadeIn();
+                        $("#waterdrop3").animate({ top: droptop }, 500, "linear", function()
+                        {
+                            drip();
+                        });
+                    })
+                })
+            
+            
+            $(".waterdrop").offset({
+                top: $("#wateringcan").offset().top + 20,
+                left: $("#wateringcan").offset().left + 5
+            })
 
-        $(".waterdrop").animate({ top: droptop }, 2000, "linear", function () {
-            $(".waterdrop").animate({ top: droptop }, 2000, "linear")
-        });
-
-
+        }
     }
+        
     else {
         attributeContent = "images/wateringcan.png";
         $(this).attr("src", attributeContent);
