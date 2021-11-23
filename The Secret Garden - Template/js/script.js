@@ -27,6 +27,8 @@ var windowWidhtSunMoon = ($(window).width()) / 2 - 100;
 var windowWidhtSunMoonEnd = ($(window).width());
 
 sunAndMoon();
+randomXY();
+movement("#butterfly");
 
 /*
 $("*").click(function(event){
@@ -56,7 +58,6 @@ function randomXY() {
 }
 
 $("#butterfly").animate("slow", "linear", function () { movement(this) });
-
 $("#butterfly").on("mouseenter", function () {
     randomXY();
     $("#butterfly").animate({ top: butterflyY, left: butterflyX }, "slow", "linear");
@@ -66,7 +67,7 @@ $("#butterfly").on("mouseleave", function () {
     randomXY();
     $("#butterfly").animate({ top: butterflyY, left: butterflyX }, "slow", "linear");
     $("#butterfly").stop();
-    setTimeout(movement(this), 6000);
+    setTimeout(movement("#butterfly"), 6000);
 });
 
 function movement(IdRef) {
@@ -92,7 +93,7 @@ $("#showButton").on("mouseenter", function () {
 /* Add a button to make the net sparkle
 Gif made through https://www.glitterphoto.net/
 Christian Foyer */
-$("#chargeButton").on("mouseenter", function (){
+$("#chargeButton").on("mouseenter", function () {
     $("#net").fadeOut();
 })
 
@@ -171,8 +172,8 @@ Kamil Fischbach */
 var windowHeightSunMoon = ($(window).height()) / 64;
 var windowWidhtSunMoon = ($(window).width()) / 2 - 100;
 var windowWidhtSunMoonEnd = ($(window).width());
-var PositionBaseY = 0.2*$(window).height;
-var PositionBaseX = 0.1*$(window).height;
+var PositionBaseY = 0.2 * $(window).height;
+var PositionBaseX = 0.1 * $(window).height;
 
 
 
@@ -183,8 +184,8 @@ function sunAndMoon() {
     $("#sun").hide();
     $("#moon").hide();
     $("body").css("background-color", "rgb(197, 195, 219)");
-    $("#sun").animate({top: 50, left: 10},1);
-    $("#moon").animate({top: 50, left: 10},1);
+    $("#sun").animate({ top: 50, left: 10 }, 1);
+    $("#moon").animate({ top: 50, left: 10 }, 1);
     $("#sun").fadeIn();
 
     $("#sun").animate({ top: -150, left: windowWidhtSunMoon }, 10000, "linear",
