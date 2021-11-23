@@ -4,6 +4,7 @@ $("#info").css("float", "right");
 $("#info").css("color", "rgb(212, 57, 57)");
 $("#info").css("font-family", "Arial, Helvetica, sans-serif");
 $("#info").css("padding-right", "10px");
+$("#info").css("z0index", "10");
 $(".buttons").css("margin-top", "10px");
 $("#buttonId").css("margin-left", "5px");
 $(".buttons").css("position", "relative");
@@ -151,8 +152,9 @@ $(document).ready(function () {
 
 // Increase the size of apples for a few sec and place the apples in the basket when clicked
 // Note: Net must be hidden
-$(".apple").css("z-index", "4");
-$("#basketfront").css("z-index", "5");
+$(".apple").css("z-index", "8");
+$("#basketwhole").css("z-index", "7");
+$("#basketfront").css("z-index", "9");
 
 var basketY = $("#basketfront").offset().top - 30;
 var basketX = $("#basketfront").offset().left + 15;
