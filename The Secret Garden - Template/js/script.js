@@ -251,7 +251,7 @@ $("#wateringcan").on("click", function () {
 
         function drip() {
             $(".waterdrop").fadeIn();
-            $(".waterdrop").animate({ top: droptop }, 100, "linear", function () {
+            $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
                 dropCount++;
                 drip();
 
