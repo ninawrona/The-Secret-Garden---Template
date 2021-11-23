@@ -57,7 +57,6 @@ function randomXY() {
     butterflyY = Math.floor(Math.random() * windowHeight);
 }
 
-$("#butterfly").animate("slow", "linear", function () { movement(this) });
 $("#butterfly").on("mouseenter", function () {
     randomXY();
     $("#butterfly").animate({ top: butterflyY, left: butterflyX }, "slow", "linear");
