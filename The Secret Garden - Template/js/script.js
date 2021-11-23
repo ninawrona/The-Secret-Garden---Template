@@ -1,7 +1,7 @@
 //MAKE THE MAGIC HAPPEN
 
 $("#info").css("float" ,"right");
-$("#info").css("color" ,"red");
+$("#info").css("color" ,"rgb(212, 57, 57)");
 $("#info").css("font-family" ,"Arial, Helvetica, sans-serif");
 $("#info").css("padding-right", "10px");
 $(".buttons").css("margin-top", "10px");
