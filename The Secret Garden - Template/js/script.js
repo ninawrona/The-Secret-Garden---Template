@@ -12,7 +12,7 @@ $(".buttons").css("z-index", "10");
 
 
 
-$(".basket").offset({ left: $("#tree").offset().left + 100 })
+
 
 
 var butterflyX;
@@ -133,7 +133,7 @@ $("#imageId").on("click", function() {
 
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
 // multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
-//Nina Wrona
+// Nina Wrona
 function appleRandomX() {
     var appleX = Math.floor(Math.random() * 320) + $("#tree").offset().left + 30;
     return appleX;
@@ -153,12 +153,13 @@ $(document).ready(function () {
 
 // Increase the size of apples for a few sec and place the apples in the basket when clicked
 // Note: Net must be hidden
-//Nina Wrona
+// Nina Wrona
+$(".basket").offset({ left: $("#tree").offset().left + 100 })
 $(".apple").css("z-index", "8");
 $("#basketwhole").css("z-index", "7");
 $("#basketfront").css("z-index", "9");
 
-var basketY = $("#basketfront").offset().top - 30;
+var basketY = $("#basketfront").offset().top;
 var basketX = $("#basketfront").offset().left + 15;
 
 
@@ -168,11 +169,11 @@ $("#apple1").on("click", function () {
 
 
 $("#apple2").on("click", function () {
-    $("#apple2").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
+    $("#apple2").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX+15 }, 2000, 'linear')
 })
 
 $("#apple3").on("click", function () {
-    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX }, 2000, 'linear')
+    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX+25 }, 2000, 'linear')
 })
 
 /* Adds a sun and moon that traverse the sky and change the background
@@ -189,8 +190,6 @@ var PositionBaseX = 0.1 * $(window).height;
 
 
 function sunAndMoon() {
-    //buttons need to be above the sun
-
     $("#sun").hide();
     $("#moon").hide();
     $("body").css("background-color", "rgb(197, 195, 219)");
