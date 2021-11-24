@@ -1,4 +1,5 @@
 //MAKE THE MAGIC HAPPEN
+//CSS
 
 $("#info").css("float", "right");
 $("#info").css("color", "rgb(212, 57, 57)");
@@ -10,11 +11,155 @@ $("#buttonId").css("margin-left", "5px");
 $(".buttons").css("position", "relative");
 $(".buttons").css("z-index", "10");
 
+$('.buttons').css({
+	'background-color' : '#4CAF50',
+	'border' : 'none',
+	'border-radius' : '4px',
+	'color' : 'rgb(212, 57, 57)',
+	'padding' : '10px 25px',
+	'text-align' : 'center',
+	'text-decoration' : 'none',
+	'display' : 'inline-block',
+	'font-size' : '16px'
+});
+
+$('#hideButton').hover(function()
+{
+    $('#hideButton').css({
+        'background-color' : 'rgb(212, 57, 57)',
+        'color' : '#4CAF50'
+    });
+}, function()
+{
+    $('#hideButton').css({
+	'background-color' : '#4CAF50',
+	'color' : 'rgb(212, 57, 57)'
+});
+});
+
+
+
+$('#buttonId').click(function()
+{
+    $('#buttonId').css({
+        'background-color' : '#4CAF50',
+        'color' : 'rgb(212, 57, 57)'
+    }).delay(1000)
+});
+
+$('#buttonId').mousedown(function() {
+    
+        $('#buttonId').css({
+        'background-color' : 'rgb(212, 57, 57)',
+        'color' : '#4CAF50'
+        });
+    
+});
+
+var charged = "not"
+$('#chargeButton').mouseup(function()
+{
+    if(charged=="not")
+    {
+        $('#chagreButton').css({
+            'background-color' : '#4CAF50',
+            'color' : 'rgb(212, 57, 57)'
+        });
+        charged="yes";
+    }
+    else
+    {
+        $('#chagreButton').css({
+            'background-color' : 'rgb(212, 57, 57)',
+            'color' : '#4CAF50'
+        });
+        charged="not";
+    }   
+});
 
 
 
 
 
+
+$('#sun').css({
+	'margin-top' : '10%',
+	'padding-right' : '100%',
+	'position' : 'absolute'
+});
+
+$('#moon').css({
+	'margin-top' : '10%',
+	'padding-right' : '100%',
+	'position' : 'absolute'
+});
+
+$('#swamp31').css({
+	'margin-top' : '0px',
+	'position' : 'fixed',
+	'height' : '25%',
+	'bottom' : '0px',
+	'right' : '40%',
+	'position' : 'absolute'
+});
+
+$('#swamp32').css({
+	'margin-top' : '0px',
+	'position' : 'fixed',
+	'height' : '25%',
+	'bottom' : '0px',
+	'right' : '40%',
+	'position' : 'absolute'
+});
+
+$('#swamp33').css({
+	'margin-top' : '0px',
+	'position' : 'fixed',
+	'height' : '40%',
+	'bottom' : '0px',
+	'right' : '40%',
+	'position' : 'absolute'
+});
+
+$('#swamp1').css({
+	'margin-top' : '0px',
+	'position' : 'fixed',
+	'height' : '90%',
+	'bottom' : '0px',
+	'right' : '0%',
+	'position' : 'absolute'
+});
+
+$('#swamp21').css({
+	'position' : 'fixed',
+	'height' : '100%',
+	'bottom' : '0px',
+	'right' : '40%',
+	'position' : 'absolute'
+});
+
+$('#swamp22').css({
+	'position' : 'fixed',
+	'height' : '100%',
+	'bottom' : '0px',
+	'left' : '52%',
+	'position' : 'absolute',
+	'top' : '-25%'
+});
+
+$('#shrek').css({
+	'position' : 'fixed',
+	'height' : '40%',
+	'bottom' : '0px',
+	'right' : '30%',
+	'position' : 'absolute'
+});
+
+
+
+
+
+//CSS END
 var butterflyX;
 var butterflyY;
 var windowWidth = $(window).width() - $("#butterfly").width();
