@@ -173,7 +173,7 @@ $("#apple2").on("click", function () {
 })
 
 $("#apple3").on("click", function () {
-    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX+25 }, 2000, 'linear')
+    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX+35 }, 2000, 'linear')
 })
 
 /* Adds a sun and moon that traverse the sky and change the background
