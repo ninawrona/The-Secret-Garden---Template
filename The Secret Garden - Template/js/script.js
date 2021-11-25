@@ -260,21 +260,7 @@ $("#chargeButton").on("click", function () {
         $("#net").fadeIn();
     }
 })
-/* Reference
-$("#imageId").on("click", function() {
-    var attributeContent = $("#imageId").attr("src");
-    if (attributeContent === "images/glad.jpg")
-    {
-        attributeContent = "images/sad.jpg";
-        $(this).attr("src", attributeContent);
-    }
-    else
-    {
-        attributeContent = "images/glad.jpg";
-        $(this).attr("src", attributeContent);
-    }
-})
-*/
+
 
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
 // multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
@@ -373,7 +359,7 @@ function sunAndMoon() {
 // Makes the watering can tilt and drop water
 // Note: Net must be hidden
 
-// The dripping water forms a swamp over time.
+// Water is dripping from random locations on the can and forms a swamp over time.
 // Robert Barta
 
 
@@ -393,8 +379,7 @@ $("#wateringcan").on("click", function () {
 
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
-
-        $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
+    
         drip();
 
         function drip() {
@@ -428,10 +413,22 @@ $("#wateringcan").on("click", function () {
                     $("#shrek").fadeIn().css("z-index", "3");
                 }
             })
-            $(".waterdrop").offset({
-                top: $("#wateringcan").offset().top + 20,
-                left: $("#wateringcan").offset().left + 5
+            function dropRandomX() {
+                var dropX = Math.floor(Math.random() * 10) + $("#wateringcan").offset().left + 5;
+                return dropX;
+            }
+            
+            function dropRandomY() {
+                var dropY = Math.floor(Math.random() * 10) + $("#wateringcan").offset().top+20;
+                return dropY;
+            }
+            
+            $(document).ready(function () {
+                $("#waterdrop1").offset({ top: dropRandomY(), left: dropRandomX() })
+                $("#waterdrop2").offset({ top: dropRandomY(), left: dropRandomX() })
+                $("#waterdrop3").offset({ top: dropRandomY(), left: dropRandomX() })
             })
+            
         }
     }
     else {
