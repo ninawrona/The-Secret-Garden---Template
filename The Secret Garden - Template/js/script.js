@@ -1,28 +1,4 @@
 //MAKE THE MAGIC HAPPEN
-//CSS
-
-
-$("#info").css("float", "right");
-$("#info").css("color", "rgb(212, 57, 57)");
-$("#info").css("font-family", "Arial, Helvetica, sans-serif");
-$("#info").css("padding-right", "10px");
-$("#info").css("z-index", "10");
-$(".buttons").css("margin-top", "10px");
-$("#buttonId").css("margin-left", "5px");
-$(".buttons").css("position", "relative");
-$(".buttons").css("z-index", "10");
-
-$('.buttons').css({
-    'background-color': '#4CAF50',
-    'border': 'none',
-    'border-radius': '4px',
-    'color': 'rgb(212, 57, 57)',
-    'padding': '10px 25px',
-    'text-align': 'center',
-    'text-decoration': 'none',
-    'display': 'inline-block',
-    'font-size': '16px'
-});
 
 $('#hideButton').hover(function () {
     $('#hideButton').css({
