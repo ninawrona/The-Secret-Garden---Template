@@ -12,69 +12,63 @@ $(".buttons").css("position", "relative");
 $(".buttons").css("z-index", "10");
 
 $('.buttons').css({
-	'background-color' : '#4CAF50',
-	'border' : 'none',
-	'border-radius' : '4px',
-	'color' : 'rgb(212, 57, 57)',
-	'padding' : '10px 25px',
-	'text-align' : 'center',
-	'text-decoration' : 'none',
-	'display' : 'inline-block',
-	'font-size' : '16px'
+    'background-color': '#4CAF50',
+    'border': 'none',
+    'border-radius': '4px',
+    'color': 'rgb(212, 57, 57)',
+    'padding': '10px 25px',
+    'text-align': 'center',
+    'text-decoration': 'none',
+    'display': 'inline-block',
+    'font-size': '16px'
 });
 
-$('#hideButton').hover(function()
-{
+$('#hideButton').hover(function () {
     $('#hideButton').css({
-        'background-color' : 'rgb(212, 57, 57)',
-        'color' : '#4CAF50'
+        'background-color': 'rgb(212, 57, 57)',
+        'color': '#4CAF50'
     });
-}, function()
-{
+}, function () {
     $('#hideButton').css({
-	'background-color' : '#4CAF50',
-	'color' : 'rgb(212, 57, 57)'
+        'background-color': '#4CAF50',
+        'color': 'rgb(212, 57, 57)'
+    });
 });
-});
 
 
 
-$('#buttonId').click(function()
-{
+$('#buttonId').click(function () {
     $('#buttonId').css({
-        'background-color' : '#4CAF50',
-        'color' : 'rgb(212, 57, 57)'
+        'background-color': '#4CAF50',
+        'color': 'rgb(212, 57, 57)'
     }).delay(1000)
 });
 
-$('#buttonId').mousedown(function() {
-    
-        $('#buttonId').css({
-        'background-color' : 'rgb(212, 57, 57)',
-        'color' : '#4CAF50'
-        });
-    
+$('#buttonId').mousedown(function () {
+
+    $('#buttonId').css({
+        'background-color': 'rgb(212, 57, 57)',
+        'color': '#4CAF50'
+    });
+
 });
 
 var charged = "not"
-$('#chargeButton').mouseup(function()
-{
-    if(charged=="not")
-    {
+$('#chargeButton').mouseup(function () {
+    if (charged == "not") {
         $('#chagreButton').css({
-            'background-color' : '#4CAF50',
-            'color' : 'rgb(212, 57, 57)'
+            'background-color': '#4CAF50',
+            'color': 'rgb(212, 57, 57)'
         });
-        charged="yes";
+        charged = "yes";
     }
-    else
-    {
+    else {
         $('#chagreButton').css({
-            'background-color' : 'rgb(212, 57, 57)',
-            'color' : '#4CAF50'
+            'background-color': 'rgb(212, 57, 57)',
+            'color': '#4CAF50'
         });
-        charged="not";
-    }   
+        charged = "not";
+    }
 });
 
 
@@ -83,76 +77,76 @@ $('#chargeButton').mouseup(function()
 
 
 $('#sun').css({
-	'margin-top' : '10%',
-	'padding-right' : '100%',
-	'position' : 'absolute'
+    'margin-top': '10%',
+    'padding-right': '100%',
+    'position': 'absolute'
 });
 
 $('#moon').css({
-	'margin-top' : '10%',
-	'padding-right' : '100%',
-	'position' : 'absolute'
+    'margin-top': '10%',
+    'padding-right': '100%',
+    'position': 'absolute'
 });
 
 $('#swamp31').css({
-	'margin-top' : '0px',
-	'position' : 'fixed',
-	'height' : '25%',
-	'bottom' : '0px',
-	'right' : '40%',
-	'position' : 'absolute'
+    'margin-top': '0px',
+    'position': 'fixed',
+    'height': '25%',
+    'bottom': '0px',
+    'right': '40%',
+    'position': 'absolute'
 });
 
 $('#swamp32').css({
-	'margin-top' : '0px',
-	'position' : 'fixed',
-	'height' : '25%',
-	'bottom' : '0px',
-	'right' : '40%',
-	'position' : 'absolute'
+    'margin-top': '0px',
+    'position': 'fixed',
+    'height': '25%',
+    'bottom': '0px',
+    'right': '40%',
+    'position': 'absolute'
 });
 
 $('#swamp33').css({
-	'margin-top' : '0px',
-	'position' : 'fixed',
-	'height' : '40%',
-	'bottom' : '0px',
-	'right' : '40%',
-	'position' : 'absolute'
+    'margin-top': '0px',
+    'position': 'fixed',
+    'height': '40%',
+    'bottom': '0px',
+    'right': '40%',
+    'position': 'absolute'
 });
 
 $('#swamp1').css({
-	'margin-top' : '0px',
-	'position' : 'fixed',
-	'height' : '90%',
-	'bottom' : '0px',
-	'right' : '0%',
-	'position' : 'absolute'
+    'margin-top': '0px',
+    'position': 'fixed',
+    'height': '90%',
+    'bottom': '0px',
+    'right': '0%',
+    'position': 'absolute'
 });
 
 $('#swamp21').css({
-	'position' : 'fixed',
-	'height' : '100%',
-	'bottom' : '0px',
-	'right' : '40%',
-	'position' : 'absolute'
+    'position': 'fixed',
+    'height': '100%',
+    'bottom': '0px',
+    'right': '40%',
+    'position': 'absolute'
 });
 
 $('#swamp22').css({
-	'position' : 'fixed',
-	'height' : '100%',
-	'bottom' : '0px',
-	'left' : '52%',
-	'position' : 'absolute',
-	'top' : '-25%'
+    'position': 'fixed',
+    'height': '100%',
+    'bottom': '0px',
+    'left': '52%',
+    'position': 'absolute',
+    'top': '-25%'
 });
 
 $('#shrek').css({
-	'position' : 'fixed',
-	'height' : '40%',
-	'bottom' : '0px',
-	'right' : '30%',
-	'position' : 'absolute'
+    'position': 'fixed',
+    'height': '40%',
+    'bottom': '0px',
+    'right': '30%',
+    'position': 'absolute'
 });
 
 
@@ -300,11 +294,11 @@ $("#apple1").on("click", function () {
 
 
 $("#apple2").on("click", function () {
-    $("#apple2").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX+15 }, 2000, 'linear')
+    $("#apple2").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX + 15 }, 2000, 'linear')
 })
 
 $("#apple3").on("click", function () {
-    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX+35 }, 2000, 'linear')
+    $("#apple3").animate({ height: 50, width: 50 }, 1000).animate({ height: 25, width: 25 }, 1000).animate({ top: basketY, left: basketX + 35 }, 2000, 'linear')
 })
 
 /* Adds a sun and moon that traverse the sky and change the background
@@ -359,10 +353,8 @@ function sunAndMoon() {
 // Makes the watering can tilt and drop water
 // Note: Net must be hidden
 
-// Water is dripping from random locations on the can and forms a swamp over time.
+// The water dripping from the can forms a swamp over time.
 // Robert Barta
-
-
 
 
 $(".waterdrop").hide(); $("#swamp1").hide(); $("#swamp21").hide(); $("#swamp22").hide(); $("#swamp31").hide(); $("#swamp32").hide(); $("#swamp33").hide(); $("#shrek").hide();
@@ -379,57 +371,13 @@ $("#wateringcan").on("click", function () {
 
         attributeContent = "images/wateringcantilted.png";
         $(this).attr("src", attributeContent);
-    
-        drip();
 
-        function drip() {
-            $(".waterdrop").fadeIn();
-            $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
-                dropCount++;
-                drip();
+        $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
+        drip1();
+        drip2();
+        drip3();
 
-                if (dropCount > 10) {
-                    $("#swamp31").fadeIn().css("z-index", "4");
-                }
-                if (dropCount > 30) {
-                    $("#swamp31").css("height", "30%", "left", "40%");
-                    $("#swamp32").fadeIn().css("left", "60%").css("z-index", "4");
-                }
-                if (dropCount > 50) {
-                    $("#swamp31").css("height", "50%");
-                    $("#swamp32").css("height", "35%")
-                    $("#swamp33").fadeIn().css("left", "30%");
-                }
-                if (dropCount > 70) {
-                    $("#swamp1").fadeIn().css("z-index", "4");
-                }
-                if (dropCount > 90) {
-                    $("#swamp21").fadeIn().css("z-index", "2");;
-                }
-                if (dropCount > 100) {
-                    $("#swamp22").fadeIn().css("z-index", "5");;
-                }
-                if (dropCount > 115) {
-                    $("#shrek").fadeIn().css("z-index", "3");
-                }
-            })
-            function dropRandomX() {
-                var dropX = Math.floor(Math.random() * 10) + $("#wateringcan").offset().left + 5;
-                return dropX;
-            }
-            
-            function dropRandomY() {
-                var dropY = Math.floor(Math.random() * 10) + $("#wateringcan").offset().top+20;
-                return dropY;
-            }
-            
-            $(document).ready(function () {
-                $("#waterdrop1").offset({ top: dropRandomY(), left: dropRandomX() })
-                $("#waterdrop2").offset({ top: dropRandomY(), left: dropRandomX() })
-                $("#waterdrop3").offset({ top: dropRandomY(), left: dropRandomX() })
-            })
-            
-        }
+
     }
     else {
         attributeContent = "images/wateringcan.png";
@@ -443,6 +391,64 @@ $("#wateringcan").on("click", function () {
 });
 
 
+//Functions for drips: 
 
+function drip1() {
+    $("#waterdrop1").fadeIn();
+    $("#waterdrop1").animate({ top: droptop }, 500, "linear", function () {
+        dropCount++;
+        drip1();
 
+        if (dropCount > 10) {
+            $("#swamp31").fadeIn().css("z-index", "4");
+        }
+        if (dropCount > 30) {
+            $("#swamp31").css("height", "30%", "left", "40%");
+            $("#swamp32").fadeIn().css("left", "60%").css("z-index", "4");
+        }
+        if (dropCount > 50) {
+            $("#swamp31").css("height", "50%");
+            $("#swamp32").css("height", "35%")
+            $("#swamp33").fadeIn().css("left", "30%");
+        }
+        if (dropCount > 70) {
+            $("#swamp1").fadeIn().css("z-index", "4");
+        }
+        if (dropCount > 90) {
+            $("#swamp21").fadeIn().css("z-index", "2");;
+        }
+        if (dropCount > 100) {
+            $("#swamp22").fadeIn().css("z-index", "5");;
+        }
+        if (dropCount > 115) {
+            $("#shrek").fadeIn().css("z-index", "3");
+        }
+    })
+    $(".waterdrop").offset({
+        top: $("#wateringcan").offset().top + 20,
+        left: $("#wateringcan").offset().left + 5
+    })
+}
 
+function drip2() {
+    $("#waterdrop2").delay(200).fadeIn();
+    $("#waterdrop2").animate({ top: droptop }, 500, "linear", function () {
+        dropCount++; //REDUNDANT. make it useful!
+        drip2();
+    });
+    $(".waterdrop").offset({
+        top: $("#wateringcan").offset().top + 20,
+        left: $("#wateringcan").offset().left + 5
+    })
+}
+function drip3() {
+    $("#waterdrop3").delay(400).fadeIn();
+    $("#waterdrop3").animate({ top: droptop }, 500, "linear", function () {
+        dropCount++; //REDUNDANT. make it useful!
+        drip3();
+    })
+    $(".waterdrop").offset({
+        top: $("#wateringcan").offset().top + 20,
+        left: $("#wateringcan").offset().left + 5
+    })
+}
