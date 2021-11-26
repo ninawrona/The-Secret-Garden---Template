@@ -265,7 +265,7 @@ function appleRandomX() {
 }
 
 function appleRandomY() {
-    var appleY = Math.floor(Math.random() * 190) + $("#tree").offset().top+70;
+    var appleY = Math.floor(Math.random() * 190) + $("#tree").offset().top + 70;
     return appleY;
 }
 
@@ -353,7 +353,7 @@ function sunAndMoon() {
 // Makes the watering can tilt and drop water
 // Note: Net must be hidden
 
-// The water dripping from the can forms a swamp over time.
+// The water dripping from the can forms a swamp over time. An entity takes over the swamp. 
 // Robert Barta
 
 
@@ -374,9 +374,6 @@ $("#wateringcan").on("click", function () {
 
         $(".waterdrop").offset({ top: $("#wateringcan").offset().top + 20, left: $("#wateringcan").offset().left + 5 })
         drip1();
-        drip2();
-        drip3();
-
 
     }
     else {
@@ -391,11 +388,11 @@ $("#wateringcan").on("click", function () {
 });
 
 
-//Functions for drips: 
+//Function for dripping: 
 
 function drip1() {
-    $("#waterdrop1").fadeIn();
-    $("#waterdrop1").animate({ top: droptop }, 500, "linear", function () {
+    $(".waterdrop").fadeIn();
+    $(".waterdrop").animate({ top: droptop }, 500, "linear", function () {
         dropCount++;
         drip1();
 
@@ -430,25 +427,5 @@ function drip1() {
     })
 }
 
-function drip2() {
-    $("#waterdrop2").delay(200).fadeIn();
-    $("#waterdrop2").animate({ top: droptop }, 500, "linear", function () {
-        dropCount++; //REDUNDANT. make it useful!
-        drip2();
-    });
-    $(".waterdrop").offset({
-        top: $("#wateringcan").offset().top + 20,
-        left: $("#wateringcan").offset().left + 5
-    })
-}
-function drip3() {
-    $("#waterdrop3").delay(400).fadeIn();
-    $("#waterdrop3").animate({ top: droptop }, 500, "linear", function () {
-        dropCount++; //REDUNDANT. make it useful!
-        drip3();
-    })
-    $(".waterdrop").offset({
-        top: $("#wateringcan").offset().top + 20,
-        left: $("#wateringcan").offset().left + 5
-    })
-}
+
+
