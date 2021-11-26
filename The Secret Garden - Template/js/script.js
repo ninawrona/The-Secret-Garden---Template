@@ -257,15 +257,15 @@ $("#chargeButton").on("click", function () {
 
 
 // Randomly place the apples in the crown of the tree by taking random number that is created by 
-// multiplaying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
+// multiplying 0-1 by the length or width of the tree crown and adding its (tree's) coordinates
 // Nina Wrona
 function appleRandomX() {
-    var appleX = Math.floor(Math.random() * 320) + $("#tree").offset().left + 30;
+    var appleX = Math.floor(Math.random() * 320) + $("#tree").offset().left + 40;
     return appleX;
 }
 
 function appleRandomY() {
-    var appleY = Math.floor(Math.random() * 190) + $("#tree").offset().top;
+    var appleY = Math.floor(Math.random() * 190) + $("#tree").offset().top+70;
     return appleY;
 }
 
