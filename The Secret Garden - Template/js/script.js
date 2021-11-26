@@ -1,6 +1,7 @@
 //MAKE THE MAGIC HAPPEN
 //CSS
 
+
 $("#info").css("float", "right");
 $("#info").css("color", "rgb(212, 57, 57)");
 $("#info").css("font-family", "Arial, Helvetica, sans-serif");
@@ -153,7 +154,6 @@ $('#shrek').css({
 
 
 
-//CSS END
 var butterflyX;
 var butterflyY;
 var windowWidth = $(window).width() - $("#butterfly").width();

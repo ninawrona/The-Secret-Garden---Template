@@ -50,7 +50,7 @@ body {
     left: 20%;
 
 }
-/*
+
 #sun
 {
     margin-top: 10%;
@@ -131,7 +131,7 @@ body {
     right:30%;
     position:absolute;
 }
-*/
+
 
 body {
     margin: 0px;
@@ -142,7 +142,7 @@ body {
     overflow: hidden;
 }
 
-/*
+
 .buttons
 {
     background-color: #4CAF50; 
@@ -179,4 +179,3 @@ body {
     background-color: rgb(212, 57, 57);
     color: #4CAF50 ;
 }
-*/
