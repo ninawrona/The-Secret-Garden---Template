@@ -253,14 +253,14 @@ $(document).ready(function () {
 
 
 // Increase the size of apples for a few sec and place the apples in the basket when clicked
-// Note: Net must be hidden
+
 // Nina Wrona
 $(".basket").offset({ left: $("#tree").offset().left + 100 })
 $(".apple").css("z-index", "8");
 $("#basketwhole").css("z-index", "7");
 $("#basketfront").css("z-index", "9");
 
-var basketY = $("#basketfront").offset().top;
+var basketY = $("#basketfront").offset().top - 40;
 var basketX = $("#basketfront").offset().left + 15;
 
 
@@ -327,8 +327,6 @@ function sunAndMoon() {
 
 
 // Makes the watering can tilt and drop water
-// Note: Net must be hidden
-
 // The water dripping from the can forms a swamp over time. An entity takes over the swamp. 
 // Robert Barta
 
