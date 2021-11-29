@@ -13,7 +13,6 @@ $('#hideButton').hover(function () {
 });
 
 
-
 $('#buttonId').click(function () {
     $('#buttonId').css({
         'background-color': '#4CAF50',
@@ -30,9 +29,9 @@ $('#buttonId').mousedown(function () {
 
 });
 
-var charged = "not"
+var charged = "not";
 $('#chargeButton').mouseup(function () {
-    if (charged == "not") {
+    if (charged === "not") {
         $('#chagreButton').css({
             'background-color': '#4CAF50',
             'color': 'rgb(212, 57, 57)'
@@ -47,88 +46,6 @@ $('#chargeButton').mouseup(function () {
         charged = "not";
     }
 });
-
-
-
-
-
-
-$('#sun').css({
-    'margin-top': '10%',
-    'padding-right': '100%',
-    'position': 'absolute'
-});
-
-$('#moon').css({
-    'margin-top': '10%',
-    'padding-right': '100%',
-    'position': 'absolute'
-});
-
-$('#swamp31').css({
-    'margin-top': '0px',
-    'position': 'fixed',
-    'height': '25%',
-    'bottom': '0px',
-    'right': '40%',
-    'position': 'absolute'
-});
-
-$('#swamp32').css({
-    'margin-top': '0px',
-    'position': 'fixed',
-    'height': '25%',
-    'bottom': '0px',
-    'right': '40%',
-    'position': 'absolute'
-});
-
-$('#swamp33').css({
-    'margin-top': '0px',
-    'position': 'fixed',
-    'height': '40%',
-    'bottom': '0px',
-    'right': '40%',
-    'position': 'absolute'
-});
-
-$('#swamp1').css({
-    'margin-top': '0px',
-    'position': 'fixed',
-    'height': '90%',
-    'bottom': '0px',
-    'right': '0%',
-    'position': 'absolute'
-});
-
-$('#swamp21').css({
-    'position': 'fixed',
-    'height': '100%',
-    'bottom': '0px',
-    'right': '40%',
-    'position': 'absolute'
-});
-
-$('#swamp22').css({
-    'position': 'fixed',
-    'height': '100%',
-    'bottom': '0px',
-    'left': '52%',
-    'position': 'absolute',
-    'top': '-25%'
-});
-
-$('#shrek').css({
-    'position': 'fixed',
-    'height': '40%',
-    'bottom': '0px',
-    'right': '30%',
-    'position': 'absolute'
-});
-
-
-
-
 
 var butterflyX;
 var butterflyY;
