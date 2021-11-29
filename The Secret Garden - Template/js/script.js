@@ -260,7 +260,7 @@ $(".apple").css("z-index", "8");
 $("#basketwhole").css("z-index", "7");
 $("#basketfront").css("z-index", "9");
 
-var basketY = $("#basketfront").offset().top - 40;
+var basketY = $("#basketfront").offset().top - 27;
 var basketX = $("#basketfront").offset().left + 15;
 
 
